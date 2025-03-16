@@ -19,7 +19,7 @@ export const claimCoupon = async (req: Request, res: Response): Promise<void> =>
         res.cookie("session_id", userSession, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: COOLDOWN_PERIOD_MS, // Cookie expires in 24 hours
         });
     }
