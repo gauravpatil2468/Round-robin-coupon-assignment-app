@@ -10,6 +10,7 @@ dotenv.config();
 
 const app = express();
 const FRONTEND_URL = process.env.FRONTEND_URL || "*";
+console.log("FRONTEND_URL:", FRONTEND_URL);
 
 app.use(express.json()); 
 app.use(cors({ origin: FRONTEND_URL, credentials: true })); 
